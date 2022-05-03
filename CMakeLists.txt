@@ -15,4 +15,4 @@ add_definitions(-DCONFIG_OPENCV)
 
 
 add_executable(linking_test test/linking.cpp)
-# target_link_directories(linking_test ${OpenCV_LIBRARIES})
+target_link_directories(linking_test ${OpenCV_LIBRARIES} gtest gtest_main)

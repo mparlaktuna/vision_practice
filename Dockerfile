@@ -36,3 +36,5 @@ RUN cd /programs/opencv && mkdir build && cd build && \
 
 RUN apt-get -y install libgtest-dev
 RUN cd /usr/src/gtest && cmake CMakeLists.txt && make && cp lib/*.a /usr/lib
+COPY build_test.sh /build_test.sh
+ENTRYPOINT ["/build_test.sh"]
