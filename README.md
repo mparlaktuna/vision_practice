@@ -4,7 +4,7 @@ Vision practice with opencv, pytorch, tensorflow, tensorrt with C++ and python. 
 I will be creating more complicated applications.
 
 ## How to build and run
-Tested under ubuntu 18.04. Requires docker, cmake, gcc, make. 
+Tested under ubuntu 18.04. Requires docker to create and run the docker file.
 
 - `make create_docker` : creates the build and test environment
 - `make run` : to run the tests
@@ -14,6 +14,6 @@ The check list is connected to pull requests and branch work. Each element has a
 
 
 ### Opencv with C++
-- [ ] Translate images using warpaffine
+- [ ] Translate, rotate, resizee, flip and crop images using warpaffine
 - [ ] Build a base test and create the build-test environment with docker
 - [x] Write a todo list
