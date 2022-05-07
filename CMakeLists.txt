@@ -13,6 +13,9 @@ find_package(OpenCV REQUIRED
 include_directories(${OPENCV_ROOT}/include)
 add_definitions(-DCONFIG_OPENCV)
 
+enable_testing()
 
-add_executable(linking_test test/linking.cpp)
-target_link_directories(linking_test ${OpenCV_LIBRARIES} gtest gtest_main)
+add_executable(compile_link test/compile_link.cpp)
+target_link_libraries(compile_link  ${OpenCV_LIBRARIES} gtest gtest_main pthread)
+add_test(NAME CompileLink
+         COMMAND compile_link)
