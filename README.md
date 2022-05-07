@@ -11,6 +11,6 @@ Tested under ubuntu 18.04. Requires docker, cmake, gcc, make.
 The check list is connected to pull requests and branch work. Each element has a branch and once completed will be pulled in by a pull request.
 
 
-### C++ with Opencv
+### Opencv with C++
 - [ ] Use transform to move images
 - [ ] Write a todo list
