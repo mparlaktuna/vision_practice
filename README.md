@@ -15,4 +15,4 @@ The check list is connected to pull requests and branch work. Each element has a
 ### Opencv with C++
 - [ ] Translate images using warpaffine
 - [ ] Build a base test and create the build-test environment with docker
-- [ ] Write a todo list
+- [x] Write a todo list
