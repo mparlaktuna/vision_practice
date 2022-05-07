@@ -1,6 +1,7 @@
 # Vision Practice
 
-Vision practice with opencv, pytorch, tensorflow, tensorrt with C++ and python.
+Vision practice with opencv, pytorch, tensorflow, tensorrt with C++ and python. Initialy following pyimagesearch university tutorials.
+I will be creating more complicated applications.
 
 ## How to build and run
 Tested under ubuntu 18.04. Requires docker, cmake, gcc, make. 
@@ -12,5 +13,5 @@ The check list is connected to pull requests and branch work. Each element has a
 
 
 ### Opencv with C++
-- [ ] Use transform to move images
+- [ ] Translate images using
 - [ ] Write a todo list
