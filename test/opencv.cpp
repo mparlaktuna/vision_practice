@@ -27,3 +27,6 @@ TEST(LoadCVMat, Opencv)
   
   waitKey(2000); // Wait for a keystroke in the window
 }
+
+// resize with different interpolations
+// 
