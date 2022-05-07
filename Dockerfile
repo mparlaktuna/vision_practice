@@ -34,7 +34,7 @@ RUN cd /programs/opencv && mkdir build && cd build && \
 	  .. && \
 	  make -j4 && make install
 
-RUN apt-get -y install libgtest-dev
+RUN apt-get -y install libgtest-dev libspdlog-dev
 RUN cd /usr/src/gtest && cmake CMakeLists.txt && make && cp lib/*.a /usr/lib
 COPY build_test.sh /build_test.sh
 ENTRYPOINT ["/build_test.sh"]

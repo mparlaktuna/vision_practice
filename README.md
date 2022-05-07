@@ -14,6 +14,6 @@ The check list is connected to pull requests and branch work. Each element has a
 
 
 ### Opencv with C++
-- [ ] Translate images using warpaffine
+- [ ] Translate, rotate, resize, flip and crop images using opencv
 - [ ] Build a base test and create the build-test environment with docker
 - [x] Write a todo list

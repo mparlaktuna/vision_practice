@@ -13,9 +13,19 @@ find_package(OpenCV REQUIRED
 include_directories(${OPENCV_ROOT}/include)
 add_definitions(-DCONFIG_OPENCV)
 
+find_package(spdlog REQUIRED)
+
 enable_testing()
+
+include_directories(include)
 
 add_executable(compile_link test/compile_link.cpp)
 target_link_libraries(compile_link  ${OpenCV_LIBRARIES} gtest gtest_main pthread)
 add_test(NAME CompileLink
          COMMAND compile_link)
+
+add_executable(opencv test/opencv.cpp)
+target_link_libraries(opencv  ${OpenCV_LIBRARIES} spdlog::spdlog gtest gtest_main pthread)
+add_test(NAME OpencvTests
+  COMMAND opencv
+  WORKING_DIRECTORY /app/test_env)
