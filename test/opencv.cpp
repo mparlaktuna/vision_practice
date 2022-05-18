@@ -3,11 +3,9 @@
 
 using namespace cv;
 
-TEST(LoadCVMat, Opencv)
+TEST(SimpleOps, Opencv)
 {
   Mat src = imread("lena.png", IMREAD_COLOR);
-
-
   Point2f srcTri[3];
   srcTri[0] = Point2f( 0.f, 0.f );
   srcTri[1] = Point2f( 0.f, 2.f );
@@ -26,6 +24,12 @@ TEST(LoadCVMat, Opencv)
   imshow("Warped", warp_dst);
   
   waitKey(2000); // Wait for a keystroke in the window
+}
+
+TEST(Resize, Opencv)
+{
+  Mat src = imread("lena.png", IMREAD_COLOR);
+  
 }
 
 // resize with different interpolations

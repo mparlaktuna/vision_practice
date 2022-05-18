@@ -17,6 +17,9 @@ find_package(spdlog REQUIRED)
 
 enable_testing()
 
+find_package(GTest REQUIRED)
+include(GoogleTest)
+
 include_directories(include)
 
 add_executable(compile_link test/compile_link.cpp)
@@ -26,6 +29,9 @@ add_test(NAME CompileLink
 
 add_executable(opencv test/opencv.cpp)
 target_link_libraries(opencv  ${OpenCV_LIBRARIES} spdlog::spdlog gtest gtest_main pthread)
-add_test(NAME OpencvTests
+add_test(NAME opencv
   COMMAND opencv
+  WORKING_DIRECTORY /app/test_env)
+
+gtest_discover_tests(opencv
   WORKING_DIRECTORY /app/test_env)
